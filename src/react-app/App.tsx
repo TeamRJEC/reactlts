@@ -1,44 +1,28 @@
 // src/App.tsx
 
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import cloudflareLogo from "./assets/Cloudflare_Logo.svg";
-import honoLogo from "./assets/hono.svg";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [name, setName] = useState("unknown");
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-        <a href="https://hono.dev/" target="_blank">
-          <img src={honoLogo} className="logo cloudflare" alt="Hono logo" />
-        </a>
-        <a href="https://workers.cloudflare.com/" target="_blank">
-          <img
-            src={cloudflareLogo}
-            className="logo cloudflare"
-            alt="Cloudflare logo"
-          />
-        </a>
-      </div>
-      <h1>Vite + React + Hono + Cloudflare</h1>
-      <div className="card">
-        <button
-          onClick={() => setCount((count) => count + 1)}
-          aria-label="increment"
-        >
-          count is {count}
-        </button>
+    <div className="brochure-container">
+      <header className="brochure-header">
+        <h1>Business Name Digital Brochure</h1>
+      </header>
+      <section className="brochure-content">
+        <div className="brochure-page">
+          <img src="/placeholder-image-1.jpg" alt="Placeholder Image 1" className="brochure-image" />
+          <div className="brochure-text">
+            <h2>Welcome!</h2>
+            <p>This is the first page of our digital brochure. Here you can showcase a compelling introductory message about your business.</p>
+          </div>
+        </div>
+        <div className="brochure-page">
+          <img src="/placeholder-image-2.jpg" alt="Placeholder Image 2" className="brochure-image" />
+          <div className="brochure-text">
+            <h2>Our Services/Products</h2>
+            <p>Describe your key services or products in detail. Use clear and concise language, focusing on the benefits to the customer.</p>
+          </div>
+        </div>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
@@ -58,8 +42,8 @@ function App() {
           Edit <code>worker/index.ts</code> to change the name
         </p>
       </div>
-      <p className="read-the-docs">Click on the logos to learn more</p>
-    </>
+      </section>
+    </div>
   );
 }
 
